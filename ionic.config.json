@@ -1,0 +1,7 @@
+{
+  "name": "lapor-pak",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

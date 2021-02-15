@@ -1,0 +1,415 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@import "./theme/custom-component.scss";
+@import "./theme/font_size_helper_mixin.scss";
+@import "./theme/margin_padding_helper_mixin.scss";
+@import "./theme/animate.css";
+
+* {
+    font-family: 'SFNS-Regular';
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+.toast-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.native-textarea.sc-ion-textarea-md {
+    overflow: scroll !important;
+}
+
+.alert-button-group {
+    flex-direction: row !important;
+}
+
+.mat-option {
+    height: auto !important;
+
+    .mat-option-text {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+
+        .first {
+            height: 16px;
+        }
+
+        .second {
+            height: 35px;
+        }
+    }
+}
+
+// #region FLEX
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-grow-0 {
+    flex-grow: 0;
+}
+
+.flex-shrink-1 {
+    flex-shrink: 1;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+// #endregion FLEX
+
+// #region TEXT COLOR
+
+.text-primary {
+    color: var(--ion-color-primary);
+}
+
+.text-secondary {
+    color: var(--ion-color-secondary);
+}
+
+.text-tertiary {
+    color: var(--ion-color-tertiary);
+}
+
+.text-white {
+    color: white;
+}
+
+.text-danger {
+    color: var(--ion-color-danger)
+}
+
+.text-warning {
+    color: var(--ion-color-warning);
+}
+
+.text-gold {
+    color: gold;
+}
+
+
+.text-forum-primary {
+    color: var(--forum-primary);
+}
+
+.text-forum-secondary {
+    color: var(--forum-secondary);
+}
+
+// #endregion TEXT COLOR
+
+// #region fontawesome
+
+fa-icon {
+    font-size: 1.3em;
+
+    &.outline {
+        svg path {
+            fill: none;
+            stroke: #000000;
+            stroke-width: 22px;
+            stroke-dasharray: 0;
+        }
+    }
+}
+
+// #endregion fontawesome
+
+// #region LAYOUT
+
+.h-100-p {
+    height: 100%;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.w-100-p {
+    width: 100%;
+}
+
+.w-75-p {
+    width: 75%;
+}
+
+.w-50-p {
+    width: 50%;
+}
+
+.w-25-p {
+    width: 25%;
+}
+
+.r-10-px {
+    right: 10px;
+}
+
+.b-25-px {
+    bottom: 25px;
+}
+
+// #endregion LAYOUT
+
+// #region FONT
+
+.font-regular {
+    font-family: 'SFNS-Regular';
+}
+
+.font-bold {
+    font-family: 'SFNS-Bold';
+}
+
+// #endregion FONT
+
+// #region POSITION
+.position-absolute {
+    position: absolute !important;
+}
+
+.position-relative {
+    position: relative;
+}
+
+// #endregion POSITION
+
+
+// #region MODAL
+ion-modal.reason-reject-modal {
+
+    --border-radius: 7px;
+
+    .modal-wrapper.sc-ion-modal-md {
+        overflow: visible;
+        // --max-height: 90vh;
+        // --width: auto;
+        --min-width: 250px;
+        --max-width: 80vw;
+        --height: auto;
+        position: absolute;
+        top: calc(50% - 135px);
+        // --min-width: 700px;
+        // --max-width: 80vw;
+
+        .ion-page {
+            overflow: visible;
+
+            .close-button {
+                width: 20px;
+                height: 20px;
+                --background: white;
+                --border-radius: 50%;
+                position: absolute;
+                right: -12px;
+                top: -12px;
+                border-radius: 50%;
+                box-shadow: -1px 1px 5px 0px #6e6e6e;
+                --color: #b1b1b1;
+                --color-hover: #ffffff;
+                --background-hover: #113673;
+            }
+
+            .inner-content {
+                padding: 16px;
+                background: white;
+                border-radius: 7px;
+                color: #636363;
+
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                width: 100%;
+
+                ion-label {
+                    margin-bottom: 16px;
+                }
+
+                ion-textarea {
+                    resize: none;
+
+                    textarea {
+                        background: #f3f3f3;
+                        height: 150px;
+                        padding-right: 8px;
+                    }
+                }
+            }
+
+            .inner-content::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}
+
+ion-modal.auto-height {
+    &.bottom {
+        align-items: flex-end;
+    }
+
+    --height: auto;
+    --width: 90%;
+    --border-radius: 7px;
+    --min-width: 290px;
+    --max-width: 500px;
+
+    .ion-page {
+        position: relative;
+        display: block;
+        contain: content;
+
+        .inner-content {
+            max-height: 80vh;
+            overflow: auto;
+            padding: 10px;
+        }
+    }
+}
+
+// #endregion MODAL
+// #region BACKGROUND
+.bg-white {
+    background: white;
+}
+
+.bg-primary {
+    background: var(--ion-color-primary);
+}
+
+.bg-secondary {
+    background: var(--ion-color-secondary);
+}
+
+.bg-tertiary {
+    background: var(--ion-color-tertiary);
+}
+
+.bg-forum-primary {
+    background: var(--forum-primary);
+}
+
+// #endregion BACKGROUND
+
+.toolbar-employee {
+    width: 40%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ion-refresher {
+    z-index: 9999;
+}
+
+.avoid-click {
+    pointer-events: none;
+}
+
+.swiper-pagination-bullet {
+    background: black;
+
+    &.swiper-pagination-bullet-active {
+        background: var(--ion-color-primary);
+    }
+}
+
+ion-modal {
+    &.image-viewer {
+        .modal-wrapper {
+            background: black;
+        }
+    }
+}
+
+.ql-editor {
+    min-height: 100px;
+}
+
+.ripple-div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}

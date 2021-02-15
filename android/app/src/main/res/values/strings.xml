@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Lapor Pak</string>
+    <string name="title_activity_main">Lapor Pak</string>
+    <string name="package_name">io.lapor_pak.id</string>
+    <string name="custom_url_scheme">io.lapor_pak.id</string>
+</resources>

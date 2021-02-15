@@ -1,0 +1,24 @@
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide class="blue-background">
+      <img src="assets/slides/slide-1.jpg">
+    </ion-slide>
+    <ion-slide class="blue-background">
+      <img src="assets/slides/slide-2.jpg">
+    </ion-slide>
+    <ion-slide class="blue-background">
+      <img src="assets/slides/slide-3.jpg">
+    </ion-slide>
+    <ion-slide class="blue-background">
+      <img src="assets/slides/slide-4.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/slides/slide-5.jpg">
+
+      <ion-button color="primary" fill="outline" class="position-absolute r-10-px b-25-px" (click)="start()">
+        Mulai
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-content class="ion-padding">
+  <div class="d-flex align-items-center justify-content-center mt-50 mb-50 position-relative">
+    <div class="login-container ion-text-center">
+      <img src="assets/icon/icon.png" alt="logo" class="logo">
+
+      <form [formGroup]="form" *ngIf="form" class="mt-50">
+        <div class="login-input position-relative">
+          <ion-input type="tel" formControlName="phone" class="ion-text-start pl-40" placeholder="Contoh: +6281234567890"></ion-input>
+          <ion-icon name="key" color="light" class="fs-26 key-icon position-absolute"></ion-icon>
+        </div>
+
+        <div class="d-flex justify-content-center w-100-p">
+          <div class="ion-text-center login-btn" [ngClass]="{'disabled': !form.valid}">
+            <ion-button color="primary" shape="round" (click)="login('admin')" fill="clear" [disabled]="!form.valid" #btnlogin>
+              <span class="text-white fs-16">Login Admin</span>
+            </ion-button>
+          </div>
+          <div class="ion-text-center login-btn-secondary" [ngClass]="{'disabled': !form.valid}">
+            <ion-button color="secondary" shape="round" (click)="login('user')" fill="clear" [disabled]="!form.valid" #btnlogin>
+              <span class="text-white fs-16">Login User</span>
+            </ion-button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

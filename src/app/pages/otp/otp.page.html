@@ -1,0 +1,66 @@
+<ion-content>
+
+  <div class="d-flex justify-content-start flex-column w-100-p mt-50">
+    <ion-title class="ion-text-center w-100-p mb-20">Kode OTP:</ion-title>
+    <div class="d-flex justify-content-center w-100-p">
+      <div class="d-flex justify-content-center otp-container ml-10 mr-10">
+        <div class="d-flex justify-content-end flex-column">
+          <ion-input type="tel" autofocus="true" min="0" max="9" maxlength="1" [(ngModel)]="otp1" #first
+            class="fs-30 ion-no-padding ion-text-center" color="dark" (ionChange)="otpChange('first', $event)"></ion-input>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center otp-container ml-10 mr-10">
+        <div class="d-flex justify-content-end flex-column">
+          <ion-input type="tel" min="0" max="9" maxlength="1" [(ngModel)]="otp2" #second
+            class="fs-30 ion-no-padding ion-text-center" color="dark" (ionChange)="otpChange('second', $event)"></ion-input>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center otp-container ml-10 mr-10">
+        <div class="d-flex justify-content-end flex-column">
+          <ion-input type="tel" min="0" max="9" maxlength="1" [(ngModel)]="otp3" #third
+            class="fs-30 ion-no-padding ion-text-center" color="dark" (ionChange)="otpChange('third', $event)"></ion-input>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center otp-container ml-10 mr-10">
+        <div class="d-flex justify-content-end flex-column">
+          <ion-input type="tel" min="0" max="9" maxlength="1" [(ngModel)]="otp4" #fourth
+            class="fs-30 ion-no-padding ion-text-center" color="dark" (ionChange)="otpChange('fourth', $event)"></ion-input>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center otp-container ml-10 mr-10">
+        <div class="d-flex justify-content-end flex-column">
+          <ion-input type="tel" min="0" max="9" maxlength="1" [(ngModel)]="otp5" #fifth
+            class="fs-30 ion-no-padding ion-text-center" color="dark" (ionChange)="otpChange('fifth', $event)"></ion-input>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center otp-container ml-10 mr-10">
+        <div class="d-flex justify-content-end flex-column">
+          <ion-input type="tel" min="0" max="9" maxlength="1" [(ngModel)]="otp6" #sixth
+            class="fs-30 ion-no-padding ion-text-center" color="dark" (ionChange)="otpChange('sixth', $event)"></ion-input>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center w-100-p mt-20">
+      <ion-button color="primary" (click)="checkOtp()">VERIFIKASI KODE</ion-button>
+    </div>
+
+    <ion-label class="ion-text-center mt-50">No. Handphone salah?</ion-label>
+    <div class="d-flex justify-content-center w-100-p">
+      <ion-button color="secondary" (click)="changePhoneNo()">GANTI NO. HANDPHONE</ion-button>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="d-flex justify-content-start flex-column w-100-p">
+      <div class="d-flex justify-content-center w-100-p">
+        <ion-label *ngIf="reauthentication === false">Silakan menunggu {{ countdown }} detik...</ion-label>
+      </div>
+      <div class="d-flex justify-content-center w-100-p">
+        <ion-button color="tertiary" [disabled]="reauthentication === false" (click)="verifyPhoneNumber(noHp)">KIRIM ULANG KODE OTP</ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
